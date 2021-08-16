@@ -8,7 +8,7 @@ steps:
       - '--file-output=artifacts.json'
     dir: example
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-    args:
+    args: 
       - '-c'
       - >
         gcloud alpha deploy releases create $(date +%y%m%d-%s)

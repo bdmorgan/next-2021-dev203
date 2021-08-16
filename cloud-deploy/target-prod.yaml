@@ -1,0 +1,10 @@
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+  name: prod
+description: prod cluster
+requireApproval: true
+gkeCluster:
+  project: next-2021-dev203
+  cluster: prod
+  location: us-central1

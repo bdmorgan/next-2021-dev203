@@ -6,3 +6,5 @@ description: web-app delivery pipeline
 serialPipeline:
  stages:
  - targetId: test
+ - targetId: staging
+ - targetId: prod

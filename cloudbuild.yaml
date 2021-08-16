@@ -4,7 +4,7 @@ steps:
       - skaffold
       - build
       - '--interactive=false'
-      - '--default-repo $(gcloud config get-value compute/region)-docker.pkg.dev/$(gcloud config get-value project)/web-app'
+      - '--default-repo=$(gcloud config get-value compute/region)-docker.pkg.dev/$(gcloud config get-value project)/web-app'
       - '--file-output=artifacts.json'
     dir: example
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk

@@ -4,7 +4,7 @@ steps:
       - skaffold
       - build
       - '--interactive=false'
-      - '--default-repo=$(gcloud config get-value compute/region)-docker.pkg.dev/$(gcloud config get-value project)/web-app'
+      - '--default-repo=us-central1-docker.pkg.dev/next-2021-dev203/web-app'
       - '--file-output=artifacts.json'
     dir: example
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
@@ -13,7 +13,7 @@ steps:
       - >
         gcloud alpha deploy releases create $(date +%y%m%d-%s)
         --delivery-pipeline=web-app --build-artifacts=artifacts.json
-        --source=example/
+        --source=./
         --region=us-central1
     dir: example
     entrypoint: bash

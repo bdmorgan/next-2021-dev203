@@ -16,4 +16,4 @@ steps:
         --source=./
         --region=us-central1
     dir: example
-    entrypoint: bash
+    entrypoint: bash 
